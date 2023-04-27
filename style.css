@@ -1,0 +1,60 @@
+.keyboard {
+  border: 2px solid rgba(0, 0, 0, 0.737);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 2px rgba(154, 154, 252, 0.5);
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 1000px;
+  margin:  auto;
+  background-color: gainsboro;
+}
+
+keyboard::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.key {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin: 3px;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+  background-color: rgba(49, 49, 61, 0.245);
+  color: white;
+  font-weight: 800;
+}
+
+.key:hover {
+  background-color: blue;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 175, .5);
+  cursor: pointer;
+
+}
+
+
+
+.clearfix {
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+.active {
+  background: rgb(239, 237, 117);
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 175, .5);
+  cursor: pointer;
+  transition: all 0.1s;
+  border-radius: 15px;
+  color:black;
+}
