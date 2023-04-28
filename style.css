@@ -9,8 +9,21 @@
   align-items: center;
   justify-content: center;
   width: 1000px;
-  margin:  auto;
+  margin: 0 auto;
   background-color: gainsboro;
+}
+
+textarea {
+  display: block;
+  margin: 10px auto;
+  width: 800px;
+  height: 300px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
 }
 
 keyboard::after {
@@ -20,11 +33,11 @@ keyboard::after {
 }
 
 .key {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 5px;
   border: 1px solid black;
-  margin: 3px;
+  margin: 4px;
   padding: 3px;
   display: flex;
   align-items: center;
@@ -33,16 +46,16 @@ keyboard::after {
   background-color: rgba(49, 49, 61, 0.245);
   color: white;
   font-weight: 800;
+  font-size: 1.5rem;
+  transition: all 0.5s;
 }
 
 .key:hover {
-  background-color: blue;
+  background-color: rgb(137, 137, 239);
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 175, .5);
   cursor: pointer;
-
+  border-radius: 0px;
 }
-
-
 
 .clearfix {
   display: block;
@@ -50,11 +63,53 @@ keyboard::after {
   clear: both;
 }
 
-.active {
-  background: rgb(239, 237, 117);
+.key:active {
+  background: rgb(41, 77, 236);
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 175, .5);
   cursor: pointer;
-  transition: all 0.1s;
-  border-radius: 15px;
+  border-radius: 20px;
   color:black;
+}
+
+
+
+.key_backspace {
+  width: 130px;
+}
+
+.key_space {
+  width: 500px;
+}
+
+.key_shift {
+  width: 250px;
+}
+
+.key_enter,
+.key_capslock {
+  width: 200px;
+}
+
+
+.key_arrow {
+  height: 25px;
+}
+
+.key_capslock {
+  position: relative;
+}
+
+.key_activalable::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(196, 196, 181);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.key_active::after {
+  background:rgb(235, 220, 20);
 }
